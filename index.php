@@ -8,6 +8,8 @@
    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
 
 	
 	<title>Miam-Miam</title>
@@ -408,29 +410,35 @@
 			transform: scale(1.1);
 		}
 
-		.review-content{
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-			gap: 2rem;
-			align-items: center;
-			margin-top: 4rem;
-		}
-
 		.box{
-			display: flex;
-			padding: 35px;
+			width: 400px;
+			height: 300px;
 			background: white;
-			border-radius: 14% 86% 14% 86% / 85% 12% 88% 15% ;
-			overflow: auto;
-			scroll-snap-type: x mandatory;
+			border-radius: 10px;
+			box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin: 20px 10px;
 		}
 
 		.box p{
-			color: var(--second-color);
-			font-size: var(--p-font);
-			line-height: 30px;
-			margin-bottom: 1.5rem;
+			text-align: center;
+			justify-content: center;
+			padding: 60px;
 		}
+
+		.bxx-text h4{
+			position: absolute;
+			top: 30px;
+			left: 35px;
+		}
+
+		
+
+		
 		
 
 	</style>
@@ -629,14 +637,13 @@
 
 		<div class="review-content">
 			<div class="box">
-				<p>J'adore commander chez ce restaurant en ligne! La qualité de la nourriture est toujours excellente, la livraison est rapide, et le service client est exceptionnel.<br>Je recommande vivement leurs plats délicieux!</p>
+				<p>J'adore commander chez ce restaurant en ligne! La qualité de la nourriture est toujours excellente, la livraison est rapide, et le service client est exceptionnel.Je recommande vivement leurs plats délicieux!</p>
 				<div class="in-box">
-					<div class="bx-icon">
-						<i class='bx bxs-user'></i>
+					<div class="top-icon">
+						<i class="fa-duotone fa-quote-left"></i>
 					</div>
 					<div class="bxx-text">
 						<h4>John</h4>
-						<h5>Food Vlogger</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
@@ -651,12 +658,8 @@
 			<div class="box">
 				<p>Ce restaurant en ligne est devenu mon endroit préféré pour commander à emporter.<br>Leur menu varié offre quelque chose pour tous les goûts, et la facilité de commande en ligne est un vrai plus.<br>Les saveurs sont authentiques, et je ne peux pas assez les recommander.</p>
 				<div class="in-box">
-					<div class="bx-icon">
-						<i class='bx bxs-user'></i>
-					</div>
 					<div class="bxx-text">
 						<h4>Sandra</h4>
-						<h5>Food Vlogger</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
@@ -671,12 +674,8 @@
 			<div class="box">
 				<p>J'ai récemment découvert ce restaurant en ligne, et je suis impressionnée par la fraîcheur des ingrédients et la créativité de leurs plats. La livraison a toujours été ponctuelle, ce qui rend l'expérience encore meilleure.<br>J'ai hâte de commander à nouveau !</p>
 				<div class="in-box">
-					<div class="bx-icon">
-						<i class='bx bxs-user'></i>
-					</div>
 					<div class="bxx-text">
 						<h4>Juliette</h4>
-						<h5>Food Vlogger</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
@@ -691,12 +690,8 @@
 			<div class="box">
 				<p>J'ai commandé chez ce restaurant en ligne pour un événement spécial, et ils ont dépassé toutes mes attentes.<br> La présentation des plats était élégante, la nourriture était délicieuse, et mes invités étaient ravis.<br>Je recommande ce service pour des occasions spéciales et des repas de tous les jours.</p>
 				<div class="in-box">
-					<div class="bx-icon">
-						<i class='bx bxs-user'></i>
-					</div>
 					<div class="bxx-text">
 						<h4>Frank</h4>
-						<h5>Food Vlogger</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
