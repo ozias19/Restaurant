@@ -418,20 +418,53 @@
 			margin-top: 4rem;
 		}
 
-		.box{
-			
+		.review-content:hover{
+			color: var(--main-color);
+			transform:scale(1.1) translateX(12px);
 		}
+
+		.review-content:active{
+			color: var(--main-color);
+		}
+
+		.box{
+			padding: 35px;
+			background: white;
+			border-radius: 3rem;
+		}
+
 			
 		.box p{
-			text-align: center;
-			justify-content: center;
-			padding: 60px;
+			color: black;
+			font-size: var(--p-font);
+			line-height: 30px;
+			margin-bottom: 1.5rem;
+		}
+
+		.in-box{
+			display: flex;
+			align-items: center;
+			gap: 30px;
+		}
+
+		.bx-img img{
+			width: 100%;
+			height: auto;
+			border-radius: 3rem;
+
 		}
 
 		.bxx-text h4{
-			position: absolute;
-			top: 30px;
-			left: 35px;
+			margin: 5px 0;
+			font-size: 18px;
+		}
+
+		.bxx-text h5{
+			color: var(--second-color);
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			margin-bottom: 	10px;
 		}
 
 		.ratings i{
@@ -463,6 +496,10 @@
 			transition: transform .50s ease;
 			cursor: pointer;
 			object-fit: contain;
+		}
+
+		.card-banner img:hover{
+			transform: scale(1.1);
 		}
 
 		.badge{
@@ -722,7 +759,7 @@
 	</section>
 
 	<!---reviews--->
-	<section class="review" id="review">
+	<section class="review" id="APROPOS">
 		<div class="middle-text">
 			<h4>Notre Clientèle</h4>
 			<h2>Avis de nos clients sur nos mets</h2>
@@ -730,13 +767,14 @@
 
 		<div class="review-content">
 			<div class="box">
-				<p>J'adore commander chez ce restaurant en ligne! La qualité de la nourriture est toujours excellente, la livraison est rapide, et le service client est exceptionnel.Je recommande vivement leurs plats délicieux!</p>
+				<p>J'adore commander chez ce restaurant en ligne! La qualité de la nourriture est toujours excellente, la livraison est rapide, et le service client est exceptionnel.</p>
 				<div class="in-box">
-					<div class="top-icon">
-						<i class="fa-duotone fa-quote-left"></i>
+					<div class="bx-img">
+						<img src="image/r3.jpg">
 					</div>
 					<div class="bxx-text">
 						<h4>John</h4>
+						<h5>Passioné de la cuisine</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
@@ -749,10 +787,14 @@
 			</div>
 
 			<div class="box">
-				<p>Ce restaurant en ligne est devenu mon endroit préféré pour commander à emporter.<br>Leur menu varié offre quelque chose pour tous les goûts, et la facilité de commande en ligne est un vrai plus.<br></p>
+				<p>Ce restaurant en ligne est devenu mon endroit préféré pour commander à emporter.<br>Leur menu varié offre quelque chose pour tous les goûts.</p>
 				<div class="in-box">
+					<div class="bx-img">
+						<img src="image/r2.jpg">
+					</div>
 					<div class="bxx-text">
 						<h4>Sandra</h4>
+						<h5>Passionée de la cuisine</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
@@ -765,10 +807,14 @@
 			</div>
 
 			<div class="box">
-				<p>J'ai récemment découvert ce restaurant en ligne, et je suis impressionnée par la fraîcheur des ingrédients et la créativité de leurs plats.<br>J'ai hâte de commander à nouveau !</p>
+				<p>J'ai récemment découvert ce restaurant en ligne, et je suis impressionnée par la fraîcheur des ingrédients et la créativité de leurs plats.</p>
 				<div class="in-box">
+					<div class="bx-img">
+						<img src="image/r1.jpg">
+					</div>
 					<div class="bxx-text">
-						<h4>Juliette</h4>
+						<h4>Julien</h4>
+						<h5>Passionée de la cuisine</h5>
 						<div class="ratings">
 							<a href="#"><i class='bx bx-star'></i></a>
 							<a href="#"><i class='bx bx-star'></i></a>
