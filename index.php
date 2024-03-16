@@ -371,10 +371,10 @@
 		.in-text .s-btnn a{
 			display: inline-block;
 			padding: 10px 10px;
-			padding-left: 60px;
+			padding-left: 10px;
 			background: var(--bg-color);
 			color: var(--main-color);
-			font-size: 14px;
+			font-size:14px;
 			font-weight: 500;
 			letter-spacing: ;
 			border-radius: 4rem;
@@ -452,7 +452,6 @@
 			padding: 30px 45px 45px;
 			padding-top: 25px;
 			backgroung: var(--other-color);
-			border-radius: 2rem;
 			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 			background-color: hsl(0, 0%, 100%);
 
@@ -464,7 +463,6 @@
 			transition: transform .50s ease;
 			cursor: pointer;
 			object-fit: contain;
-			background-size: cover;
 		}
 
 		.badge{
@@ -660,7 +658,6 @@
 
 				<div class="top-icon">
 					<a href="#"><i class='bx bx-heart'></i></a>
-					<a href="#" class="cart"><i class='bx bx-cart'></i></a>
 				</div>
 			</div>
 
@@ -679,7 +676,6 @@
 
 				<div class="top-icon">
 					<a href="#"><i class='bx bx-heart'></i></a>
-					<a href="#" class="cart"><i class='bx bx-cart'></i></a>
 				</div>
 			</div>
 
@@ -698,7 +694,6 @@
 
 				<div class="top-icon">
 					<a href="#"><i class='bx bx-heart'></i></a>
-					<a href="#" class="cart"><i class='bx bx-cart'></i></a>
 				</div>
 			</div>
 
@@ -717,7 +712,6 @@
 
 				<div class="top-icon">
 					<a href="#"><i class='bx bx-heart'></i></a>
-					<a href="#" class="cart"><i class='bx bx-cart'></i></a>
 				</div>
 			</div>
 		</div>
@@ -835,7 +829,7 @@
 				<li>
 					<div class="blog-card">
 						<div class="card-banner">
-							<img src="image/blog-2.jpg" width="600" height="390" loading="lazy"
+							<img src="image/blog-2.jpg" loading="lazy"
 							alt="Faire des cuisses de poulet avec de délicieux nouveau ingrédient " class="w-100">
 							<div class="badge">Burger</div>
 						</div>
