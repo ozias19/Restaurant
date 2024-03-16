@@ -410,20 +410,18 @@
 			transform: scale(1.1);
 		}
 
-		.box{
-			width: 400px;
-			height: 300px;
-			background: white;
-			border-radius: 10px;
-			box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-			display: flex;
-			flex-direction: column;
+		.review-content{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+			gap: 2rem;
 			align-items: center;
-			justify-content: space-between;
-			box-sizing: border-box;
-			margin: 20px 10px;
+			margin-top: 4rem;
 		}
 
+		.box{
+			
+		}
+			
 		.box p{
 			text-align: center;
 			justify-content: center;
@@ -436,11 +434,119 @@
 			left: 35px;
 		}
 
-		
+		.ratings i{
+			color: var(--main-color);
+			font-size: 18px;
+			margin-right: 5px;
+		}
 
-		
-		
+		.blog-list{
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+			margin-top: 4rem;
+		}
 
+		.blog-card{
+			position: relative;
+			padding: 30px 45px 45px;
+			padding-top: 25px;
+			backgroung: var(--other-color);
+			border-radius: 2rem;
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+			background-color: hsl(0, 0%, 100%);
+
+		}
+
+		.card-banner img{
+			width: 100%;
+			height: 100%;
+			transition: transform .50s ease;
+			cursor: pointer;
+			object-fit: contain;
+			background-size: cover;
+		}
+
+		.badge{
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			color: black;
+			font-size: 18px;
+			margin-bottom: 5px;
+			font-weight: 700;
+		}
+
+		.blog-card .card-meta-wrapper{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 12px 20px;
+		}
+
+		.blog-card .card-meta-link{
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.blog-card .card-meta-link .meta-info:is(:hover){
+			color: var(--main-color);
+			gap: 10px;
+		}
+
+		.blog-card .card-meta-link i{
+			color: var(--main-color);
+			font-size: 1.5rem;
+		}
+
+		.blog-card .card-meta-link .meta-info{
+			color: var(--other-color);
+		}
+
+		.blog-card .card-titre{
+			color: black;
+			font-size: 18px;
+			margin-bottom: 5px;
+			font-weight: 700;
+		}
+
+		.blog-card .card-titre:is(:hover, :focus){
+			opacity: 0.8;
+			text-decoration: underline;
+		}
+
+		.blog-card .card-texte{
+			color: var(--other-color);
+		}
+
+		.section .section-sub{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: red;
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+
+		.titre-section{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			font-size: var(--h2-font);
+			color: var(--main-color);
+		}
+
+		.section .section-texte{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			color: var(--other-color);
+		}
 	</style>
 
 
@@ -455,7 +561,7 @@
 <body>
 
 	<!-- header -->
-	<header class="sticky">
+	<header class="sticky" data-header>
 		<a href="#" class="logo"><i class='bx bxs-home'></i>Miam-Miam</a>
 
 		<ul class="navlist">
@@ -474,13 +580,6 @@
 
 	</header>
 
-	<script>
-		const header = document.querySelector("header");
-
-        window.addEventListener("scroll", function (){
-	        header.classList.toggle("sticky" window.scrollY > 80);
-        });
-	</script>
 
 	<!---home--->
 	<section class="home" id="home">
@@ -656,7 +755,7 @@
 			</div>
 
 			<div class="box">
-				<p>Ce restaurant en ligne est devenu mon endroit préféré pour commander à emporter.<br>Leur menu varié offre quelque chose pour tous les goûts, et la facilité de commande en ligne est un vrai plus.<br>Les saveurs sont authentiques, et je ne peux pas assez les recommander.</p>
+				<p>Ce restaurant en ligne est devenu mon endroit préféré pour commander à emporter.<br>Leur menu varié offre quelque chose pour tous les goûts, et la facilité de commande en ligne est un vrai plus.<br></p>
 				<div class="in-box">
 					<div class="bxx-text">
 						<h4>Sandra</h4>
@@ -672,7 +771,7 @@
 			</div>
 
 			<div class="box">
-				<p>J'ai récemment découvert ce restaurant en ligne, et je suis impressionnée par la fraîcheur des ingrédients et la créativité de leurs plats. La livraison a toujours été ponctuelle, ce qui rend l'expérience encore meilleure.<br>J'ai hâte de commander à nouveau !</p>
+				<p>J'ai récemment découvert ce restaurant en ligne, et je suis impressionnée par la fraîcheur des ingrédients et la créativité de leurs plats.<br>J'ai hâte de commander à nouveau !</p>
 				<div class="in-box">
 					<div class="bxx-text">
 						<h4>Juliette</h4>
@@ -686,28 +785,117 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="box">
-				<p>J'ai commandé chez ce restaurant en ligne pour un événement spécial, et ils ont dépassé toutes mes attentes.<br> La présentation des plats était élégante, la nourriture était délicieuse, et mes invités étaient ravis.<br>Je recommande ce service pour des occasions spéciales et des repas de tous les jours.</p>
-				<div class="in-box">
-					<div class="bxx-text">
-						<h4>Frank</h4>
-						<div class="ratings">
-							<a href="#"><i class='bx bx-star'></i></a>
-							<a href="#"><i class='bx bx-star'></i></a>
-							<a href="#"><i class='bx bx-star'></i></a>
-							<a href="#"><i class='bx bx-star'></i></a>
-							<a href="#"><i class='bx bx-star'></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
 	</section>
 
+	<!--Blog-->
+	<section class="section section-divider blanc blog" id="blog">
+		<div class="contain">
+			
+			<p class="section-sub">Blog Posts</p><br>
+
+			<h2 class="h2 titre-section">
+				Tout est question de Nourriture
+			</h2><br>
+
+			<p class="section-texte">
+				La bonne bouffe apprvisionne notre organisme en substance nutritive pour une santé saine.
+			</p>
+
+			<ul class="blog-list">
+				<li>
+					<div class="blog-card">
+						<div class="card-banner">
+							<img src="image/blog-1.jpg" width="600" height="390" loading="lazy"
+							alt="Que pensez vous des recettes de pizza au fromage?" class="w-100">
+							<div class="badge">Pizza</div>
+						</div>
+						<div class="card-content">
+								<div class="card-meta-wrapper">
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-calendar'></i>
+								       <time class="meta-info" datetime="2024-03-166">Mars 16 2024</time>
+								   </a>
+
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-user'></i>
+								       <p class="meta-info">Jonathan Smith</p>
+								   </a>
+							    </div> <br>
+
+							    <h3 class="h3">
+							    	<a href="#" class="card-titre">Que pensez vous des recettes de pizza au fromage?</a>
+							    </h3><br>
+
+							    <p class="card-text">Enfin, les experts soutienne ou aident à deéterminer si vous pouvez augmenter vos fonds</p>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="blog-card">
+						<div class="card-banner">
+							<img src="image/blog-2.jpg" width="600" height="390" loading="lazy"
+							alt="Faire des cuisses de poulet avec de délicieux nouveau ingrédient " class="w-100">
+							<div class="badge">Burger</div>
+						</div>
+						<div class="card-content">
+								<div class="card-meta-wrapper">
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-calendar'></i>
+								       <time class="meta-info" datetime="2024-03-166">Mars 16 2024</time>
+								   </a>
+
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-user'></i>
+								       <p class="meta-info">Jonathan Smith</p>
+								   </a>
+							    </div><br>
+
+							    <h3 class="h3">
+							    	<a href="#" class="card-titre">Faire des cuisses de poulet avec de délicieux nouveau ingrédient</a>
+							    </h3><br>
+
+							    <p class="card-text">Enfin, les experts soutienne ou aident à deéterminer si vous pouvez augmenter vos fonds</p>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="blog-card">
+						<div class="card-banner">
+							<img src="image/blog-3.jpg" width="600" height="390" loading="lazy"
+							alt="Les pate chaude de chez miam-miam font d'elle une innovante créativité" class="w-100">
+							<div class="badge">Viande</div>
+						</div>
+						<div class="card-content">
+								<div class="card-meta-wrapper">
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-calendar'></i>
+								       <time class="meta-info" datetime="2024-03-166">Mars 16 2024</time>
+								   </a>
+
+								   <a href="#" class="card-meta-link">
+								   	   <i class='bx bxs-user'></i>
+								       <p class="meta-info">Jonathan Smith</p>
+								   </a>
+							    </div><br>
+
+							    <h3 class="h3">
+							    	<a href="#" class="card-titre">Les pate chaude de chez miam-miam font d'elle une innovante créativité</a>
+							    </h3><br>
+
+							    <p class="card-text">Enfin, les experts soutienne ou aident à deéterminer si vous pouvez augmenter vos fonds</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
 	<!----link to js---->
-	<script type="text/javascript" src="script.js"></script>
+	<script src="script.js"></script>
 
 </body>
 </html>
